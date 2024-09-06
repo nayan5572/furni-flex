@@ -69,21 +69,36 @@ const OrderItem = () => {
   }, [category, categories]);
 
   return (
-    <div className="flex mt-20">
-      <div className="w-[10%] border-r-2 border-gray-200 pr-4">
+    <div className="flex justify-between mt-20">
+      <div className="w-[263px] border-r-2 border-gray-200 pr-[30px]">
         {" "}
         <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
           <TabList className="space-y-4">
             {" "}
-            <Tab className="tab-item cursor-pointer">Lounge Chair</Tab>
-            <Tab className="tab-item cursor-pointer">Rocking Chair</Tab>
-            <Tab className="tab-item cursor-pointer">Side Chair</Tab>
+            <Tab
+              style={{ padding: "8px 8px" }}
+              className="tab-item cursor-pointer rounded-lg bg-[#0E0E0E] text-white"
+            >
+              Lounge Chair
+            </Tab>
+            <Tab
+              style={{ padding: "8px 8px" }}
+              className="tab-item cursor-pointer rounded-lg bg-[#0E0E0E] text-white"
+            >
+              Rocking Chair
+            </Tab>
+            <Tab
+              style={{ padding: "8px 8px" }}
+              className="tab-item cursor-pointer rounded-lg bg-[#0E0E0E] text-white"
+            >
+              Side Chair
+            </Tab>
           </TabList>
         </Tabs>
       </div>
 
       {/* Right side: TabPanel content, taking 80% width */}
-      <div className="w-[90%] pl-5">
+      <div className="w-[960px]">
         <Tabs
           className=""
           selectedIndex={tabIndex}
