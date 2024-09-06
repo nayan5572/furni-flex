@@ -1,49 +1,28 @@
 import { Link } from "react-router-dom";
 import logo1 from "../../assets/images/logo.png";
-import "./SignUp.css";
+import "../SignUp/SignUp.css";
 
-const SignUp = () => {
+const Login = () => {
   return (
     <div className="flex justify-evenly">
       <div>
         <div className="bg-white flex items-center justify-center min-h-screen">
           <div className="w-full max-w-md bg-gray-100 shadow-md rounded-lg px-8 py-6">
             {/* Header Section */}
-            <div className="text-center mb-6">
-              <h1 className="text-2xl font-semibold">Welcome To</h1>
-              <h2 className="text-3xl font-bold">
-                <span className="text-black">Furni</span>
-                <span className="text-blue-500">Flex</span>
-              </h2>
+            <div className="mb-6">
+              <h1 className="text-2xl font-semibold">Welcome Back!</h1>
               <p className="text-gray-500">
-                Signup for purchase your desire products
+                Enter your credentials to access your account
               </p>
             </div>
 
-            {/* Sign-Up Form */}
+            {/* Sign-In Form */}
             <form>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <input
-                    className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    type="text"
-                    placeholder="First name"
-                  />
-                </div>
-                <div>
-                  <input
-                    className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    type="text"
-                    placeholder="Last name (optional)"
-                  />
-                </div>
-              </div>
-
               <div className="mt-4">
                 <input
                   className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="email"
-                  placeholder="Email address"
+                  placeholder="Enter your email"
                 />
               </div>
 
@@ -51,10 +30,10 @@ const SignUp = () => {
                 <input
                   className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="password"
-                  placeholder="Password"
+                  placeholder="Enter your password"
                 />
                 <span className="absolute inset-y-0 right-3 flex items-center text-gray-500 cursor-pointer">
-                  {/* Eye Icon (for future show/hide password functionality) */}
+                  {/* Eye Icon (for show/hide password functionality) */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -64,6 +43,12 @@ const SignUp = () => {
                     <path d="M10 3c-5 0-9 7-9 7s4 7 9 7 9-7 9-7-4-7-9-7zm0 12a5 5 0 110-10 5 5 0 010 10zm0-8a3 3 0 100 6 3 3 0 000-6z" />
                   </svg>
                 </span>
+              </div>
+
+              <div className="mt-2 text-right">
+                <a href="#" className="text-sm text-blue-500 hover:underline">
+                  Forgot Password
+                </a>
               </div>
 
               <div className="mt-4 flex items-center">
@@ -85,7 +70,7 @@ const SignUp = () => {
                   type="submit"
                   className="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-800"
                 >
-                  Signup
+                  Sign In
                 </button>
               </div>
             </form>
@@ -121,11 +106,11 @@ const SignUp = () => {
               </button>
             </div>
 
-            {/* Already have an account */}
+            {/* New User? */}
             <p className="text-center text-sm text-gray-500 mt-6">
-              Have an account?
-              <Link to="/login" className="text-blue-500 hover:underline">
-                Sign In
+              New here?
+              <Link to="/signUp" className="text-blue-500 hover:underline">
+                Sign Up
               </Link>
             </p>
           </div>
@@ -150,4 +135,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;

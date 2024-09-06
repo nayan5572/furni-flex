@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Recliner Chair Wood",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Rocking",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://i.imgur.com/RTqZez7.png"
+  },
+  {
+    "id": 2,
+    "name": "Timber Ride Padded",
+    "currentPrice": "59.00",
+    "originalPrice": "75.00",
+    "category": "Side",
+    "discount": "30% OFF",
+    "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs",
+    "buttonText": "Add to cart",
+    "img": "https://i.ibb.co.com/k1v2b56/rocking-chair-with-padded-seat-1.png"
+  },
+  {
+    "id": 3,
+    "name": "Colored Wooden Chair",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Lounge",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://i.ibb.co.com/BjZg1Qp/image-146.png"
+  },
+  {
+    "id": 4,
+    "name": "Blank Bamboo Wicker",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Side",
+    "discount": "30% OFF",
+    "description": "Lightweight, easy to clean, sturdy, safe and stable. Non-slip legs",
+    "buttonText": "Add to cart",
+    "img": "https://i.ibb.co.com/WpMsdxW/image-147.png"
+  },
+  {
+    "id": 5,
+    "name": "Isolated Wooden Rock",
+    "currentPrice": "165.00",
+    "originalPrice": "400.00",
+    "category": "Lounge",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://i.ibb.co.com/rkStdJD/image-148.png"
+  },
+  {
+    "id": 6,
+    "name": "Minimal Empty Rocking",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Rocking",
+    "discount": "30% OFF",
+    "description": "A seat, especially for one person, usually having four legs for support.",
+    "buttonText": "Add to cart",
+    "img": "https://i.ibb.co.com/M9T4SHw/image-149.png  "
+  },
+  {
+    "id": 7,
+    "name": "Isolated Wooden Rock",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Rocking",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 8,
+    "name": "Recliner Chair Wood",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Lounge",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 9,
+    "name": "Recliner Chair Wood",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Lounge",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 10,
+    "name": "Recliner Chair Wood",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Rocking",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://via.placeholder.com/150"
+  }
+]
