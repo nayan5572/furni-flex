@@ -1,8 +1,42 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import logo1 from "../../assets/images/logo.png";
+import { AuthContext } from "../../Providers/AuthProviders";
 import "./SignUp.css";
 
 const SignUp = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result?.user;
+      console.log(loggedUser);
+      updateUserProfile(data.name, data?.photoURL)
+        .then(() => {
+          console.log("User Profile info Updated");
+          reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "User Create Successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          navigate("/");
+        })
+        .catch((error) => console.log(error));
+    });
+  };
   return (
     <div className="flex justify-evenly">
       <div>
@@ -21,17 +55,22 @@ const SignUp = () => {
             </div>
 
             {/* Sign-Up Form */}
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <input
+                    {...register("name", { required: true })}
                     className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     type="text"
                     placeholder="First name"
                   />
+                  {errors.name && (
+                    <span className="text-red-600">This field is required</span>
+                  )}
                 </div>
                 <div>
                   <input
+                    {...register("lastName")}
                     className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     type="text"
                     placeholder="Last name (optional)"
@@ -41,18 +80,26 @@ const SignUp = () => {
 
               <div className="mt-4">
                 <input
+                  {...register("email", { required: true })}
                   className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="email"
                   placeholder="Email address"
                 />
+                {errors.email && (
+                  <span className="text-red-600">This field is required</span>
+                )}
               </div>
 
               <div className="mt-4 relative">
                 <input
+                  {...register("password", { required: true })}
                   className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="password"
                   placeholder="Password"
                 />
+                {errors.password && (
+                  <span className="text-red-600">This field is required</span>
+                )}
                 <span className="absolute inset-y-0 right-3 flex items-center text-gray-500 cursor-pointer">
                   {/* Eye Icon (for future show/hide password functionality) */}
                   <svg
@@ -68,10 +115,14 @@ const SignUp = () => {
 
               <div className="mt-4 flex items-center">
                 <input
+                  {...register("checkbox", { required: true })}
                   id="terms"
                   type="checkbox"
                   className="form-checkbox h-4 w-4 text-blue-500"
                 />
+                {errors.checkbox && (
+                  <span className="text-red-600">Please Click Checkbox</span>
+                )}
                 <label htmlFor="terms" className="ml-2 text-sm text-gray-700">
                   I agree to the{" "}
                   <a href="#" className="text-blue-500 underline">
@@ -81,12 +132,11 @@ const SignUp = () => {
               </div>
 
               <div className="mt-6">
-                <button
+                <input
                   type="submit"
-                  className="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-800"
-                >
-                  Signup
-                </button>
+                  value="Signup"
+                  className="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-800 cursor-pointer"
+                />
               </div>
             </form>
 

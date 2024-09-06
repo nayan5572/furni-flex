@@ -4,6 +4,7 @@ import Login from "../Login/Login";
 import OrderItem from "../OrderItem/OrderItem";
 import Home from "./../../Components/Home/Home/Home";
 import SignUp from "./../SignUp/SignUp";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +21,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "orderItem/:category",
-        element: <OrderItem></OrderItem>,
+        element: (
+          <PrivateRoutes>
+            <OrderItem></OrderItem>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/signUp",

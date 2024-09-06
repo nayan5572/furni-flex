@@ -1,8 +1,19 @@
+import { useContext } from "react";
 import { FaBasketShopping } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo1 from "../../assets/images/logo.png";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+    navigate("/login");
+  };
+  const navigate = useNavigate();
   const navOption = (
     <>
       <li>
@@ -90,7 +101,7 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
                 <li>
-                  <a>Logout</a>
+                  <button onClick={handleLogout}>Logout</button>
                 </li>
               </ul>
             </div>

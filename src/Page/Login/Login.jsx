@@ -1,8 +1,37 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import logo1 from "../../assets/images/logo.png";
+import { AuthContext } from "../../Providers/AuthProviders";
 import "../SignUp/SignUp.css";
 
 const Login = () => {
+  // const [disabled, setDisabled] = useState(true);
+  const { signIn } = useContext(AuthContext);
+  const naviGate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    signIn(email, password).then((result) => {
+      const user = result.user;
+      console.log(user);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Successfully Login",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      naviGate(from, { replace: true });
+    });
+  };
+
   return (
     <div className="flex justify-evenly">
       <div>
@@ -17,11 +46,12 @@ const Login = () => {
             </div>
 
             {/* Sign-In Form */}
-            <form>
+            <form onSubmit={handleLogin}>
               <div className="mt-4">
                 <input
                   className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
                 />
               </div>
@@ -30,6 +60,7 @@ const Login = () => {
                 <input
                   className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="password"
+                  name="password"
                   placeholder="Enter your password"
                 />
                 <span className="absolute inset-y-0 right-3 flex items-center text-gray-500 cursor-pointer">
@@ -66,12 +97,11 @@ const Login = () => {
               </div>
 
               <div className="mt-6">
-                <button
+                <input
+                  className="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-800 cursor-pointer"
                   type="submit"
-                  className="w-full bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-800"
-                >
-                  Sign In
-                </button>
+                  value="Sign In"
+                />
               </div>
             </form>
 
