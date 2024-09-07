@@ -5,7 +5,7 @@ const useMenu = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("fakeData.json")
+    fetch("http://localhost:3000/itemCart")
       .then((res) => res.json())
       .then((data) => {
         setMenu(data);

@@ -2,10 +2,13 @@ import { useContext } from "react";
 import { FaBasketShopping } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import logo1 from "../../assets/images/logo.png";
+import useCart from "../../Components/hooks/useCart";
 import { AuthContext } from "../../Providers/AuthProviders";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [cart] = useCart();
+  console.log(cart.length);
 
   const handleLogout = () => {
     logOut()
@@ -78,7 +81,7 @@ const Navbar = () => {
             <div className="relative w-fit">
               <FaBasketShopping className="text-4xl" />
               <span className="absolute -right-1 -bottom-2 flex size-5 items-center justify-center rounded-full bg-red-500 text-center text-[10px] text-white">
-                0
+                {cart.length}
               </span>
             </div>
           </div>

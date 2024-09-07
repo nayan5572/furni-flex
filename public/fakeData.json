@@ -11,6 +11,28 @@
     "img": "https://i.imgur.com/RTqZez7.png"
   },
   {
+    "id": 1,
+    "name": "Recliner Chair Wood",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Rocking",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://i.imgur.com/RTqZez7.png"
+  },
+  {
+    "id": 1,
+    "name": "Recliner Chair Wood",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Rocking",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://i.imgur.com/RTqZez7.png"
+  },
+  {
     "id": 2,
     "name": "Timber Ride Padded",
     "currentPrice": "59.00",
@@ -20,6 +42,72 @@
     "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs",
     "buttonText": "Add to cart",
     "img": "https://i.ibb.co.com/k1v2b56/rocking-chair-with-padded-seat-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Timber Ride Padded",
+    "currentPrice": "59.00",
+    "originalPrice": "75.00",
+    "category": "Side",
+    "discount": "30% OFF",
+    "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs",
+    "buttonText": "Add to cart",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz9Ht3UTtAGMCnyppf_pQyTkV3nZSPtBROxw&s"
+  },
+  {
+    "id": 2,
+    "name": "Timber Ride Padded",
+    "currentPrice": "59.00",
+    "originalPrice": "75.00",
+    "category": "Side",
+    "discount": "30% OFF",
+    "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs",
+    "buttonText": "Add to cart",
+    "img": "https://i.ibb.co.com/k1v2b56/rocking-chair-with-padded-seat-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Timber Ride Padded",
+    "currentPrice": "59.00",
+    "originalPrice": "75.00",
+    "category": "Side",
+    "discount": "30% OFF",
+    "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs",
+    "buttonText": "Add to cart",
+    "img": "https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.625,f_auto,h_535,q_auto,w_950/c_pad,h_535,w_950/R1812094-01?pgw=1&pgwact=1"
+  },
+  {
+    "id": 2,
+    "name": "Timber Ride Padded",
+    "currentPrice": "59.00",
+    "originalPrice": "75.00",
+    "category": "Side",
+    "discount": "30% OFF",
+    "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs",
+    "buttonText": "Add to cart",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO8h7OYDPUA9amvSYBfTACnyLezTQgDWT-pw&s"
+  },
+  {
+    "id": 3,
+    "name": "Colored Wooden Chair",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Lounge",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://www.starrynight.co.in/cdn/shop/products/Untitleddesign_1200x.jpg?v=1619675706"
+  },
+  {
+    "id": 3,
+    "name": "Colored Wooden Chair",
+    "currentPrice": "299.00",
+    "originalPrice": "350.00",
+    "category": "Lounge",
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "buttonText": "Add to cart",
+    "img": "https://i.ibb.co.com/BjZg1Qp/image-146.png"
   },
   {
     "id": 3,
@@ -74,7 +162,7 @@
     "discount": "30% OFF",
     "description": "It has a backrest that can be tilted back, and often a footrest extended",
     "buttonText": "Add to cart",
-    "img": "https://via.placeholder.com/150"
+    "img": "https://operafurniture.com.bd/wp-content/uploads/2021/03/chair-1.jpg.webp"
   },
   {
     "id": 8,
@@ -85,7 +173,7 @@
     "discount": "30% OFF",
     "description": "It has a backrest that can be tilted back, and often a footrest extended",
     "buttonText": "Add to cart",
-    "img": "https://via.placeholder.com/150"
+    "img": "https://images.steelcase.com/image/upload/t_masthead_ow/q_auto,f_auto,h_656,w_1166/v1698417684/463a698a-e6ec-45ff-b63e-df79dd960b7e.png"
   },
   {
     "id": 9,
@@ -96,7 +184,7 @@
     "discount": "30% OFF",
     "description": "It has a backrest that can be tilted back, and often a footrest extended",
     "buttonText": "Add to cart",
-    "img": "https://via.placeholder.com/150"
+    "img": "https://m.media-amazon.com/images/I/716tq9Y8WOL._AC_SL1500_.jpg"
   },
   {
     "id": 10,
@@ -107,6 +195,6 @@
     "discount": "30% OFF",
     "description": "It has a backrest that can be tilted back, and often a footrest extended",
     "buttonText": "Add to cart",
-    "img": "https://via.placeholder.com/150"
+    "img": "https://m.media-amazon.com/images/I/61VqPRU2-UL._AC_SL1500_.jpg"
   }
 ]
