@@ -78,12 +78,14 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <div>
-            <div className="relative w-fit">
-              <FaBasketShopping className="text-4xl" />
-              <span className="absolute -right-1 -bottom-2 flex size-5 items-center justify-center rounded-full bg-red-500 text-center text-[10px] text-white">
-                {cart.length}
-              </span>
-            </div>
+            <Link to="/orderDetails">
+              <div className="relative w-fit">
+                <FaBasketShopping className="text-4xl" />
+                <span className="absolute -right-1 -bottom-2 flex size-5 items-center justify-center rounded-full bg-red-500 text-center text-[10px] text-white">
+                  {cart.length}
+                </span>
+              </div>
+            </Link>
           </div>
           <div className="ml-4">
             <div className="dropdown dropdown-end">

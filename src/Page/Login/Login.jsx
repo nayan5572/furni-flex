@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import logo1 from "../../assets/images/logo.png";
@@ -10,8 +10,18 @@ const Login = () => {
   const { signIn } = useContext(AuthContext);
   const naviGate = useNavigate();
   const location = useLocation();
-
   const from = location.state?.from?.pathname || "/";
+
+  const [email, setEmail] = useState("halder72@yahoo.com");
+  const [password, setPassword] = useState("123456");
+  // Handle input change
+  const handleInputChange = (event) => {
+    setEmail(event.target.value); // Update state with the new input value
+  };
+  const handlePassChange = (event) => {
+    setPassword(event.target.value); // Update state with the new input value
+  };
+
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -50,7 +60,8 @@ const Login = () => {
               <div className="mt-4">
                 <input
                   className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  value="halder72@yahoo.com"
+                  value={email}
+                  onChange={handleInputChange}
                   type="email"
                   name="email"
                   placeholder="Enter your email"
@@ -62,7 +73,8 @@ const Login = () => {
                   className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="password"
                   name="password"
-                  value="123456"
+                  value={password}
+                  onChange={handlePassChange}
                   placeholder="Enter your password"
                 />
                 <span className="absolute inset-y-0 right-3 flex items-center text-gray-500 cursor-pointer">
