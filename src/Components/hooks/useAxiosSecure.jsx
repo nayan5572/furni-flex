@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosSecure = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL:
+    "https://furni-flex-server-ay3hufs3f-halder25572s-projects.vercel.app",
 });
 const useAxiosSecure = () => {
   return axiosSecure;
