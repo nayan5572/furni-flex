@@ -1,4 +1,3 @@
-import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../Components/hooks/useAuth";
 import useAxiosSecure from "../../Components/hooks/useAxiosSecure";
@@ -17,8 +16,8 @@ const ItemCard = ({ items }) => {
     _id,
   } = items;
   const { user } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
+  // const navigate = useNavigate();
+  // const location = useLocation();
   const axiosSecure = useAxiosSecure();
   const [, refetch] = useCart();
 
@@ -68,7 +67,7 @@ const ItemCard = ({ items }) => {
         confirmButtonText: "Yes, login",
       }).then((result) => {
         if (result.isConfirmed) {
-          navigate("/login", { state: { from: location } });
+          // navigate("/login", { state: { from: location } });
         }
       });
     }

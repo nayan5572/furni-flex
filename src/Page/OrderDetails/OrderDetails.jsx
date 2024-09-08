@@ -105,7 +105,7 @@ const OrderDetails = () => {
       </div>
 
       {/* Summary Section */}
-      <div className="w-[380px] bg-gray-100 p-6 rounded-lg shadow-lg">
+      <div className="w-[380px] h-[300px] bg-gray-100 p-6 rounded-lg shadow-lg">
         <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
         <div className="flex justify-between mb-2">
           <span>Subtotal</span>

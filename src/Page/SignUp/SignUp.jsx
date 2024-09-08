@@ -13,8 +13,10 @@ const SignUp = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile, signInWithGoogle } =
+    useContext(AuthContext);
   const navigate = useNavigate();
+  // const naviGate = useNavigate();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -36,6 +38,17 @@ const SignUp = () => {
         })
         .catch((error) => console.log(error));
     });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div className="flex justify-evenly">
@@ -149,7 +162,10 @@ const SignUp = () => {
 
             {/* Social Sign-In Buttons */}
             <div className="grid grid-cols-2 gap-4">
-              <button className="w-full bg-gray-100 border border-gray-300 py-2 px-4 rounded-lg flex items-center justify-center hover:bg-gray-200">
+              <button
+                onClick={handleGoogleSignIn}
+                className="w-full bg-gray-100 border border-gray-300 py-2 px-4 rounded-lg flex items-center justify-center hover:bg-gray-200"
+              >
                 <img
                   src="https://img.icons8.com/color/20/000000/google-logo.png"
                   alt="Google logo"
