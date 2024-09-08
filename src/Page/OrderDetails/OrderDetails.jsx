@@ -1,9 +1,12 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
+import useAxiosSecure from "../../Components/hooks/useAxiosSecure";
 import useCart from "../../Components/hooks/useCart";
 
 const OrderDetails = () => {
-  const [cart] = useCart();
+  const [cart, refetch] = useCart();
   const [quantity, setQuantity] = useState(1);
+
   // Function to handle increment
   const handleIncrement = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
@@ -20,6 +23,33 @@ const OrderDetails = () => {
     (total, item) => total + (item.currentPrice || 0) * (item.quantity || 1),
     0
   );
+  const axiosSecure = useAxiosSecure();
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure.delete(`/carts/${id}`).then((res) => {
+          refetch();
+          if (res.data.deleteCount > 0) {
+            console.log("delete User", res);
+            // refetch();
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success",
+            });
+          }
+        });
+      }
+    });
+  };
   return (
     <div className="flex justify-between mt-10 px-6 max-w-screen-xl mx-auto">
       {/* Cart Items Section */}
@@ -62,7 +92,10 @@ const OrderDetails = () => {
               <h3 className="font-semibold">{item.name}</h3>
             </div>
             <div className="space-y-5">
-              <button className="text-[#939393] font-bold text-xl ml-9">
+              <button
+                onClick={() => handleDelete(item._id)}
+                className="text-[#939393] font-bold text-xl ml-9"
+              >
                 ×
               </button>
               <div className="text-lg font-bold">€{item.currentPrice}</div>

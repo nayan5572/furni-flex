@@ -5,9 +5,7 @@ const useMenu = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(
-      "https://furni-flex-server-ay3hufs3f-halder25572s-projects.vercel.app/itemCart"
-    )
+    fetch("https://furni-flex-server-two.vercel.app/itemCart")
       .then((res) => res.json())
       .then((data) => {
         setMenu(data);

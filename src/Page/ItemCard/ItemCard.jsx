@@ -38,7 +38,7 @@ const ItemCard = ({ items }) => {
         description,
       };
       axiosSecure
-        .post("http://localhost:3000/carts", cartItem)
+        .post("https://furni-flex-server-two.vercel.app/carts", cartItem)
         .then((res) => {
           console.log(res.data);
           if (res.data.insertedId) {
